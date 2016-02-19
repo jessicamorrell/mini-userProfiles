@@ -1,0 +1,29 @@
+
+body {
+	display: block;
+	text-align: center;
+	margin:0px;
+}
+
+h1 {
+	background-color: #00587A;
+	padding: 20px;
+	color: white;
+	font-family: Helvetica;
+	font-size: 30px;
+	margin:0px;
+}
+.form {
+	background-color: #E7E7DE;
+	padding: 10px;
+	margin: 3px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Helvetica;
+	font-size: 24px;
+}
+
+.input {
+	display: block;
+}

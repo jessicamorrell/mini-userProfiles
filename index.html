@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="userProfile">
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<title></title>
+</head>
+<body ng-controller="mainCtrl">
+	<h1>Artist Info</h1>
+	<form class = "form">
+		<input type="text" placeholder="Name" ng-model="name">
+		<input type="text" placeholder="Genre" ng-model="genre">
+		<input type="number" placeholder="Number" ng-model="score">
+		<button type="submit" ng-click="addArtist()"> Add </button>
+	</form>
+
+	<section class="list-main-container">
+		<header>
+			<h2 ng-show="reallyLike.length != 0" class="list-header">really like</h2>
+			<h2 ng-show="kindOfLike.length != 0" class="list-header">kind of like</h2>
+		</header>
+	</section>
+	<div class="list-container">
+		<div class="item" ng-repeat="artist in reallyLike">
+			<h4>Name: {{artist.name}}</h4>
+			<h4>Genre: {{artist.genre}}</h4>
+			<h4>Score: {{artist.score}}</h4>
+		</div>
+	</div>
+	<div class="list-container">
+		<div class="item" ng-repeat="artist in kindOfLike">
+			<h4>Name: {{artist.name}}</h4>
+			<h4>Genre: {{artist.genre}}</h4>
+			<h4>Score: {{artist.score}}</h4>
+		</div>
+	</div>
+
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script type="text/javascript" src= "js/app.js"></script>
+<script type="text/javascript" src= "js/mainCtrl.js"></script>
+<script type="text/javascript" src= "js/service.js"></script>
+</body>
+</html>
